@@ -1,0 +1,1029 @@
+/* Сброс отступов и padding для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Включаем box-sizing */
+}
+
+/* Общие стили для body */
+body {
+    font-family: Arial, sans-serif;
+}
+body, html {
+    max-width: 100%;
+    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+}
+
+/* Стиль для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    background: #44413d;
+    z-index: 3;
+    padding: 0 20px; /* Добавляем отступы слева и справа */
+}
+
+/* Навигация */
+.navigate {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navhed {
+    text-decoration: none;
+    color: #fafbfb;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navhed:hover {
+    background-color: #c6a25f;
+}
+
+/* Контейнеры с текстом */
+.container1, .container2, .container3, .container4, .container5 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Стиль для кнопок */
+button {
+    width: 100%;
+    max-width: 235px;
+    height: 50px;
+    margin-top: 50px;
+    background: #c6a25f;
+    color: #fafbfb;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #ab8447;
+}
+
+/* Контейнер для изображения и текста */
+.container1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(image/fon1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding-left: 240px;
+}
+.container1::before {
+    content: ""; /* Псевдоэлемент */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Черный цвет с прозрачностью 40% */
+    z-index: 0; /* Устанавливаем псевдоэлемент ниже текста */
+}
+.fon1text {
+    text-align: left;
+    max-width: 850px;
+    padding: 20px;
+    position: relative;
+    color: #fbfbfb;
+    font-size: 36px; /* Увеличиваем размер шрифта */
+    line-height: 1.4;
+}
+
+/* Картинки с шириной 100% */
+.img, .img2, .img3 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* План с картинками */
+.plans {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.plan {
+    width: 22%;
+    min-width: 250px;
+    height: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.plan h1 {
+    font-size: 40px;
+    color: #c6a25f;
+}
+
+.line {
+    display: flex;
+    align-items: baseline;
+}
+
+/* Кнопки */
+.btn, .btn2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btnteh {
+    background: #fafbfb;
+    color: #c6a25f;
+    border: 2px solid #c6a25f;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: auto;
+    min-width: 120px; /* Убедимся, что кнопки не слишком маленькие */
+}
+
+.btnteh:hover {
+    background-color: #c6a25f;
+    color: #fbfbfb;
+}
+
+/* Контейнер для большого текста */
+.container4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4edde;
+    padding: 30px;
+}
+.container3 {
+    background-color: #f4edde;
+}
+/* Текстовый блок */
+.text {
+    width: 50%;
+    padding: 20px;
+    font-size: 22px;
+    color: #261e1a;
+}
+
+/* Блок с изображениями */
+.img {
+    max-width: 430px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Контейнер с изображениями для дверей */
+.doors {
+    display: inline;
+}
+
+.img2 {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Контейнер с фоновым изображением */
+.container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(image/fon2.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+}
+.container5::before {
+    content: ""; /* Псевдоэлемент */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Черный цвет с прозрачностью 40% */
+    z-index: 0; /* Устанавливаем псевдоэлемент ниже текста */
+}
+/* Блок с преимуществами */
+.sotrudnichestvo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.sotr, .sotr2 {
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Блоки должны быть поверх фона */
+}
+.img3 {
+    width: 360px; /* Увеличиваем ширину */
+    height: 250px; /* Увеличиваем высоту */
+    object-fit: cover; /* Чтобы картинка хорошо встраивалась в контейнер */
+    border-radius: 10px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.txt {
+    margin-top: -30px;
+    color: #000000;
+    margin-left: -120px;
+}
+.doors-container {
+    width: 1920px;
+    height: 668px;
+    background-color: #F4EDDE; /* фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Заголовок блока */
+.heading {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+    color: #161717;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Сеточный контейнер для дверей */
+.doors-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Стиль для каждого элемента (двери) */
+.door-item {
+    width: 270px;
+    height: 377px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Картинка двери */
+.door-item img {
+    width: 167px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Название и описание двери */
+.door-item .door-title {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #161717;
+    margin-top: 10px;
+}
+
+.door-item .door-description {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #808285;
+    margin-top: 5px;
+}
+
+/* Эффект при наведении */
+.door-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили кнопок */
+button {
+    background-color: #c6a25f;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ab8447;
+}
+/* block */
+.block {
+    width: 1920px;
+    height: 685px;
+    background: #F4EDDE;
+    padding: 20px;
+}
+
+/* Заголовок блока */
+.frame-225 h1 {
+    text-transform: uppercase;
+    font-family: 'Tenor Sans';
+    font-size: 40px;
+    color: #161717;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Контейнер для карточек с изображениями */
+.frame-239 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Стиль для каждого блока с изображением и текстом */
+.frame-232, .frame-233, .frame-234, .frame-235, .frame-236, .frame-237, .frame-238 {
+    width: 270px;
+    text-align: center;
+}
+
+.frame-232 .image, .frame-233 .image, .frame-234 .image, .frame-235 .image, .frame-236 .image, .frame-237 .image, .frame-238 .image {
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.frame-232 h4, .frame-233 h4, .frame-234 h4, .frame-235 h4, .frame-236 h4, .frame-237 h4, .frame-238 h4 {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #161717;
+}
+
+/* Кнопка для консультации */
+.component {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+/* Основной стиль для секции акций */
+/* Block */
+/* Основной блок */
+.block {
+    width: 100%;
+    padding: 20px;
+    background: #F4EDDE;
+}
+
+/* Заголовок блока */
+.frame-225 h1 {
+    text-transform: uppercase;
+    font-family: 'Tenor Sans';
+    font-size: 40px;
+    color: #161717;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Контейнер для акций */
+.frame-226 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Позволяет разделить блоки при необходимости */
+}
+
+/* Каждый блок с акциями */
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FFFFFF;
+    padding: 10px;
+    width: 48%; /* Это обеспечит два блока в ряд */
+    box-sizing: border-box;
+}
+
+/* Внутренний блок для текста */
+.frame-181 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+    width: 100%;
+}
+
+.frame-181 h2 {
+    font-family: 'Tenor Sans';
+    font-size: 32px;
+    color: #161717;
+}
+
+.frame-181 p {
+    font-family: 'Futura PT';
+    font-size: 18px;
+    color: #161717;
+}
+
+/* Блок с ценами */
+.frame-223 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.frame-125, .frame-126 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 53px;
+}
+
+.database {
+    width: 40px;
+    height: 40px;
+}
+
+.vector {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #808285;
+    border-radius: 50%;
+}
+
+.price h4 {
+    font-family: 'Futura PT';
+    font-size: 18px;
+    color: #161717;
+    margin: 0;
+}
+
+.price p {
+    font-family: 'Futura PT';
+    font-size: 18px;
+    color: #808285;
+}
+
+/* Кнопка для отправки заявки */
+.component {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.block1 {
+    width: 100%;
+    padding: 20px;
+    background: #F4EDDE;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Контейнер для текста и изображений */
+.frame-169 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Блок с текстом и изображениями */
+.content-block {
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+/* Блок с текстом */
+.frame-157 {
+    width: 60%; /* Ширина блока с текстом */
+    font-family: 'Futura PT', sans-serif;
+}
+
+.frame-157 h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+    color: #161717;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Текст */
+.frame-157 p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #808285;
+    margin-bottom: 30px;
+}
+
+/* Кнопка */
+.frame-157 button {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    background-color: #c6a25f;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.frame-157 button:hover {
+    background-color: #ab8447;
+}
+
+/* Блок с изображениями */
+.frame-249 {
+    width: 35%; /* Ширина блока с изображениями */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Стиль для изображений */
+.frame-249 .image {
+    width: 100%;
+    height: 150px; /* Установим общую высоту для всех изображений */
+    background-color: #D9D9D9;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.block2 {
+    width: 100%;
+    height: 508px;
+    position: relative;
+    background: linear-gradient(0deg, rgba(22, 23, 23, 0.95), rgba(22, 23, 23, 0.95)), url('image/proi-dverey.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Псевдоэлемент для размытия фона */
+.block2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(150px);
+    z-index: 0; /* Это псевдоэлемент должен быть ниже контента */
+}
+
+/* Контейнер для текста и кнопки */
+.frame-182 {
+    position: absolute;
+    width: 570px;
+    height: 362px;
+    left: calc(50% - 570px / 2 - 300px);
+    top: 73px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 1; /* Контент будет поверх фона */
+}
+
+/* Текстовый блок */
+.frame-228 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 20px;
+    width: 100%;
+    color: #ffffff;
+}
+
+/* Заголовок */
+.frame-228 h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Текст */
+.frame-228 p {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+}
+/* Блок с изображением */
+.background-image {
+    position: absolute;
+    width: 570px;
+    height: 478px;
+    left: calc(50% - 570px / 2 + 300px);
+    bottom: 0;
+    background-image: url('image/man-4.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    z-index: 0; /* Изображение под текстом */
+}
+.block3 {
+    width: 100%;
+    height: 635px;
+    background: #F4EDDE;
+    padding: 50px 0;
+}
+
+/* Заголовок для секции отзывов */
+.reviews-title {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: #161717;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* Контейнер для всех отзывов */
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стиль для каждого отзыва */
+.review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 370px;
+    height: 294px;
+    margin-bottom: 30px;
+}
+
+/* Контейнер для текста отзыва */
+.review-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Контейнер с текстом отзыва */
+.review-text {
+    width: 65%;
+}
+
+/* Имя клиента */
+.client-name {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 24px;
+    color: #161717;
+    margin-bottom: 10px;
+}
+
+/* Оценка клиента (звезды) */
+.stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, #E8C87E 0%, #AB8447 100%);
+    border-radius: 50%;
+}
+
+/* Отзыв */
+.client-review {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+    color: #808285;
+}
+
+/* Аватар клиента */
+.review-avatar {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.block4 {
+    width: 100%;
+    height: 717px;
+    background: linear-gradient(0deg, rgba(22, 23, 23, 0.95), rgba(22, 23, 23, 0.95)), url('image/proi-dverey.jpg');
+    background-size: cover;
+    position: relative;
+    padding: 50px 0;
+}
+
+/* Элементы с круглыми фонами */
+.ellipse {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    background: linear-gradient(180deg, #E8C87E 0%, #AB8447 100%);
+    opacity: 0.5;
+    filter: blur(250px);
+}
+
+.ellipse.left {
+    left: 0;
+    top: 0;
+}
+
+.ellipse.right {
+    right: 0;
+    bottom: 0;
+}
+
+/* Заголовок */
+.title {
+    text-align: center;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+/* Подзаголовок */
+.subtitle {
+    text-align: center;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+/* Контейнер для формы */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.form {
+    width: 570px;
+    background: #FFFFFF;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Заголовок формы */
+.form h2 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 32px;
+    color: #161717;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Группа инпутов */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #808285;
+    border-radius: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+    color: #808285;
+    background: #fafafa;
+}
+
+.input-group textarea {
+    height: 100px;
+}
+
+/* Иконки */
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.user-icon {
+    left: 10px;
+    background-image: url('user-icon.png'); /* Путь к иконке */
+}
+
+.mail-icon {
+    right: 10px;
+    background-image: url('mail-icon.png'); /* Путь к иконке */
+}
+
+.phone-icon {
+    right: 10px;
+    background-image: url('phone-icon.png'); /* Путь к иконке */
+}
+/* Общие стили для блока */
+.contact-info {
+    width: 100%;
+    height: 635px;
+    background: #F4EDDE;
+    position: relative;
+    padding: 30px;
+}
+
+/* Фон карты */
+.map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #D9D9D9;
+    background-image: url('image/fonkart.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1; /* Помещаем карту на фон */
+}
+
+/* Контейнер для контактной информации */
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+}
+
+/* Контактная форма */
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 24px;
+    color: #161717;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Стиль для блока с адресом, телефоном, email и WhatsApp */
+.address, .phone, .email, .whatsapp {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.address .icon, .phone .icon, .email .icon, .whatsapp .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Иконки для контактов */
+.location-icon {
+    background-image: url('location-icon.png'); /* Путь к иконке адреса */
+    background-size: contain;
+}
+
+.phone-icon {
+    background-image: url('phone-icon.png'); /* Путь к иконке телефона */
+    background-size: contain;
+}
+
+.email-icon {
+    background-image: url('email-icon.png'); /* Путь к иконке email */
+    background-size: contain;
+}
+
+.whatsapp-icon {
+    background-image: url('whatsapp-icon.png'); /* Путь к иконке WhatsApp */
+    background-size: contain;
+}
+/* Общий стиль для блока */
+footer {
+    width: 100%;
+    height: 86px;
+    background-color: #161717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Внутренний контейнер с элементами */
+footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px; /* Максимальная ширина, чтобы контент не растягивался на всю ширину */
+}
+
+/* Политика конфиденциальности */
+footer .privacy-policy {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #808285;
+    opacity: 0.25;
+    text-align: left;
+}
+
+/* Сайт разработан */
+footer .developed-by {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #808285;
+    opacity: 0.25;
+    text-align: right;
+}
+
+/* Название компании */
+footer .company-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: #808285;
+    opacity: 0.25;
+    text-align: center;
+}
